@@ -4,6 +4,12 @@ A tool to generate [AppSRE schedules](https://github.com/app-sre/qontract-schema
 
 ## Usage
 
+Build the binary and copy to the current dir:
+```
+cargo build --release && cp target/debug/ic_updater .
+alias ic_updater=./ic_updater
+```
+
 You need to specify some parameters:
 
 ```
@@ -56,6 +62,11 @@ output in a file just pipe it:
 
 There are some inputs that generate an error:
 
+- Not enough users:
+```
+❯ ic_updater -n test -s "2022-07-01 07:00" -e "2022-07-07 14:00"
+ERROR: at least 1 user is needed
+```
 - End date is not great enough because the length of the schedule is lower than the difference between start and end dates:
 ```
 ❯ ic_updater -n test -u a,b -l 3 -s "2022-07-01 07:00" -e "2022-07-02 14:00"

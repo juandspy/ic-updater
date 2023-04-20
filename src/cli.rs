@@ -50,7 +50,6 @@ fn exit_usage(msg: &str) {
 
 fn validate_args(args: &Args) {
     if args.users.len() == 0 {
-        // this cannot happen but just in case
         exit_usage("at least 1 user is needed");
     }
 
