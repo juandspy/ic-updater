@@ -14,6 +14,7 @@ name: {}", name);
     if description != "" {
         out = format!("{}\ndescription: {}", &out, description);
     }
+    out = format!("{}\nschedule:", &out);
     out
 }
 

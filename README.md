@@ -41,6 +41,7 @@ labels: {}
 
 name: test
 description: test description
+schedule:
 - start: '2022-07-01 07:00'
   end: '2022-07-04 07:00'
   users:

@@ -25,7 +25,8 @@ $schema: /app-sre/schedule-1.yml
 labels: {}
 
 name: SCHEDULE-NAME
-description: SCHEDULE_DESCRIPTION";
+description: SCHEDULE_DESCRIPTION
+schedule:";
     let got = ic_updater::render_header("SCHEDULE-NAME", "SCHEDULE_DESCRIPTION");
     assert_eq!(&got, want);
 }
@@ -39,7 +40,8 @@ $schema: /app-sre/schedule-1.yml
 
 labels: {}
 
-name: SCHEDULE-NAME";
+name: SCHEDULE-NAME
+schedule:";
     let got = ic_updater::render_header("SCHEDULE-NAME", "");
     assert_eq!(&got, want);
 }
