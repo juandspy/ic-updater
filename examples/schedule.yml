@@ -8,11 +8,11 @@ description: SCHEDULE_DESCRIPTION
 
 schedule:
 - start: '2022-07-01 07:00'
-  end: '2022-07-04 14:00'
+  end: '2022-07-04 07:00'
   users:
   - $ref: /teams/TEST_TEAM/users/USER_A.yml
 - start: '2022-07-04 07:00'
-  end: '2022-07-07 14:00'
+  end: '2022-07-07 07:00'
   users:
   - $ref: /teams/TEST_TEAM/users/USER_B.yml
 

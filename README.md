@@ -77,3 +77,26 @@ ERROR: end date '2022-07-02 14:00:00' should be after start date + length of sch
 ❯ ic_updater --name test -d "test description" --users user-a,user-b -l 3 -s "2022-07-01 07:00" -e "2021-07-07 14:00"
 ERROR: end date '2021-07-07 14:00:00' should be greater than date '2022-07-01 07:00:00'
 ```
+
+##  TODO
+
+1. Support a diffent hour in the end date. For example:
+```yaml
+---
+$schema: /app-sre/schedule-1.yml
+
+labels: {}
+
+name: SCHEDULE-NAME
+description: SCHEDULE_DESCRIPTION
+
+schedule:
+- start: '2022-07-01 07:00'
+  end: '2022-07-04 14:00'
+  users:
+  - $ref: /teams/TEST_TEAM/users/USER_A.yml
+- start: '2022-07-04 07:00'
+  end: '2022-07-07 14:00'
+  users:
+  - $ref: /teams/TEST_TEAM/users/USER_B.yml
+```
